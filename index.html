@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBoard</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        .poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[#F4F7FF] poppins text-[#00303C]">
+    <header>
+        <div class="container mx-auto p-6 gap-6 md:gap-0 flex flex-col md:flex-row justify-between items-center bg-white rounded-2xl mb-6 md:my-6">
+            <!-- Logo -->
+            <div class="flex items-center gap-2">
+                <img src="assets/logo.png" alt="logo">
+                <h2 class="text-4xl font-light">Dev<span class="font-bold">Board</span></h2>
+            </div>
+            <!-- Total Tasks Complete & Theme -->
+            <div class="flex items-center gap-24 md:gap-6">
+                <div class="flex items-center gap-2 p-3 bg-[#F4F7FF] rounded-2xl">
+                    <img src="assets/checkbox.png" alt="checkbox">
+                    <h2 class="font-bold text-3xl">23</h2>
+                </div>
+                <div class="bg-[#F4F7FF] p-3 rounded-full cursor-pointer">
+                    <img src="assets/theme-btn.png" alt="theme-btn">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container mx-auto flex flex-col lg:flex-row gap-6">
+            <section class="flex-1">
+                <div class="p-6 bg-white grid grid-cols-4 gap-6 rounded-2xl rounded-b-none border-b-2 border-dotted">
+                    <!-- Task Remaining -->
+                    <div class="flex flex-col md:flex-row gap-3 items-center bg-[#F4F7FF] p-6 rounded-2xl col-span-2 lg:col-span-1 row-start-1">
+                        <div class="p-6 bg-white rounded-full inline-block">
+                            <img src="assets/checkbox.png" alt="checkbox" class="w-7 aspect-square max-w-none">
+                        </div>
+                        <div class="flex flex-col items-center md:items-stretch">
+                            <h3 class="font-medium text-base">Task Assigned</h3>
+                            <h1 class="font-bold text-3xl">05</h1>
+                        </div>
+
+                    </div>
+                    <!-- Dashboard -->
+                    <div class="bg-gradient-to-br from-[#3752FD] to-[#9BA8F8] p-6 rounded-2xl flex items-center gap-3 col-span-4 lg:col-span-2 row-start-2 lg:row-start-auto">
+                        <img src="assets/board.png" alt="board">
+                        <div class="font-medium text-2xl text-white">
+                            <h1>Discover Something</h1>
+                            <h1>New Today!</h1>
+                        </div>
+                    </div>
+                    <!-- Date -->
+                    <div class="flex flex-col md:flex-row gap-3 items-center bg-[#F4F7FF] p-6 rounded-2xl col-span-2 lg:col-span-1 row-start-1 lg:row-start-auto">
+                        <div class="p-6 bg-white rounded-full inline-block">
+                            <img src="assets/calender.png" alt="calender" class="w-6 aspect-square max-w-none">
+                        </div>
+                        <div class="flex flex-col items-center md:items-stretch">
+                            <div class="font-normal text-2xl">
+                                <h3>Wed ,</h3>
+                            </div>
+                            <div class="font-bold text-2xl">
+                                <h1>Jul 28 2025</h1>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Task Container -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 bg-white rounded-2xl rounded-t-none">
+                    <!-- Task 1 -->
+                    <div class="bg-[#F4F7FF] p-6 rounded-2xl">
+                        <!-- Task Details -->
+                        <div class="flex flex-col gap-3 pb-6 border-b-2 border-dotted">
+                            <div class="bg-white p-3 rounded-lg self-start">
+                                <h3 class="font-normal text-base">ShopEase</h3>
+                            </div>
+                            <h1 class="font-medium text-2xl letter tracking-wider">Fix Mobile Button Issue</h1>
+                            <div class="bg-white p-3 rounded-lg">
+                                <h3 class="font-normal text-base text-gray-500">Debug using chrome<br>DevTools, can check for any issue</h3>
+                            </div>
+                        </div>
+                        <!-- Task Deadline -->
+                         <div class="flex justify-between items-center gap-3 pt-6">
+                            <div>
+                                <h3 class="text-sm font-normal">Deadline</h3>
+                                <h2 class="text-base font-medium">21 March 2025</h2>
+                            </div>
+                            <button class="bg-[#3752FD] text-white font-medium text-base px-5 py-3 rounded-lg">Completed</button>
+                         </div>
+                    </div>
+                    <!-- Task 2 -->
+                    <div class="bg-[#F4F7FF] p-6 rounded-2xl">
+                        <!-- Task Details -->
+                        <div class="flex flex-col gap-3 pb-6 border-b-2 border-dotted">
+                            <div class="bg-white p-3 rounded-lg self-start">
+                                <h3 class="font-normal text-base">CloudSync</h3>
+                            </div>
+                            <h1 class="font-medium text-2xl letter tracking-wider">Add Dark Mode</h1>
+                            <div class="bg-white p-3 rounded-lg">
+                                <h3 class="font-normal text-base text-gray-500">Debug using chrome<br>DevTools, can check for any issue</h3>
+                            </div>
+                        </div>
+                        <!-- Task Deadline -->
+                         <div class="flex justify-between items-center gap-3 pt-6">
+                            <div>
+                                <h3 class="text-sm font-normal">Deadline</h3>
+                                <h2 class="text-base font-medium">21 March 2025</h2>
+                            </div>
+                            <button class="bg-[#3752FD] text-white font-medium text-base px-5 py-3 rounded-lg">Completed</button>
+                         </div>
+                    </div>
+                    <!-- Task 3 -->
+                    <div class="bg-[#F4F7FF] p-6 rounded-2xl">
+                        <!-- Task Details -->
+                        <div class="flex flex-col gap-3 pb-6 border-b-2 border-dotted">
+                            <div class="bg-white p-3 rounded-lg self-start">
+                                <h3 class="font-normal text-base">SwiftPay</h3>
+                            </div>
+                            <h1 class="font-medium text-2xl letter tracking-wider">Optimize Home page</h1>
+                            <div class="bg-white p-3 rounded-lg">
+                                <h3 class="font-normal text-base text-gray-500">Debug using chrome<br>DevTools, can check for any issue</h3>
+                            </div>
+                        </div>
+                        <!-- Task Deadline -->
+                         <div class="flex justify-between items-center gap-3 pt-6">
+                            <div>
+                                <h3 class="text-sm font-normal">Deadline</h3>
+                                <h2 class="text-base font-medium">21 March 2025</h2>
+                            </div>
+                            <button class="bg-[#3752FD] text-white font-medium text-base px-5 py-3 rounded-lg">Completed</button>
+                         </div>
+                    </div>
+                    <!-- Task 4 -->
+                    <div class="bg-[#F4F7FF] p-6 rounded-2xl">
+                        <!-- Task Details -->
+                        <div class="flex flex-col gap-3 pb-6 border-b-2 border-dotted">
+                            <div class="bg-white p-3 rounded-lg self-start">
+                                <h3 class="font-normal text-base">Meta</h3>
+                            </div>
+                            <h1 class="font-medium text-2xl letter tracking-wider">Add new emoji 🤲</h1>
+                            <div class="bg-white p-3 rounded-lg">
+                                <h3 class="font-normal text-base text-gray-500">Debug using chrome<br>DevTools, can check for any issue</h3>
+                            </div>
+                        </div>
+                        <!-- Task Deadline -->
+                         <div class="flex justify-between items-center gap-3 pt-6">
+                            <div>
+                                <h3 class="text-sm font-normal">Deadline</h3>
+                                <h2 class="text-base font-medium">21 March 2025</h2>
+                            </div>
+                            <button class="bg-[#3752FD] text-white font-medium text-base px-5 py-3 rounded-lg">Completed</button>
+                         </div>
+                    </div>
+                    <!-- Task 5 -->
+                    <div class="bg-[#F4F7FF] p-6 rounded-2xl">
+                        <!-- Task Details -->
+                        <div class="flex flex-col gap-3 pb-6 border-b-2 border-dotted">
+                            <div class="bg-white p-3 rounded-lg self-start">
+                                <h3 class="font-normal text-base">Google LLC</h3>
+                            </div>
+                            <h1 class="font-medium text-2xl letter tracking-wider">Integrate OpenAI API</h1>
+                            <div class="bg-white p-3 rounded-lg">
+                                <h3 class="font-normal text-base text-gray-500">Debug using chrome<br>DevTools, can check for any issue</h3>
+                            </div>
+                        </div>
+                        <!-- Task Deadline -->
+                         <div class="flex justify-between items-center gap-3 pt-6">
+                            <div>
+                                <h3 class="text-sm font-normal">Deadline</h3>
+                                <h2 class="text-base font-medium">21 March 2025</h2>
+                            </div>
+                            <button class="bg-[#3752FD] text-white font-medium text-base px-5 py-3 rounded-lg">Completed</button>
+                         </div>
+                    </div>
+                    <!-- Task 6 -->
+                    <div class="bg-[#F4F7FF] p-6 rounded-2xl">
+                        <!-- Task Details -->
+                        <div class="flex flex-col gap-3 pb-6 border-b-2 border-dotted">
+                            <div class="bg-white p-3 rounded-lg self-start">
+                                <h3 class="font-normal text-base">Glassdoar</h3>
+                            </div>
+                            <h1 class="font-medium text-2xl letter tracking-wider">Improve Job searching</h1>
+                            <div class="bg-white p-3 rounded-lg">
+                                <h3 class="font-normal text-base text-gray-500">Debug using chrome<br>DevTools, can check for any issue</h3>
+                            </div>
+                        </div>
+                        <!-- Task Deadline -->
+                         <div class="flex justify-between items-center gap-3 pt-6">
+                            <div>
+                                <h3 class="text-sm font-normal">Deadline</h3>
+                                <h2 class="text-base font-medium">21 March 2025</h2>
+                            </div>
+                            <button class="bg-[#3752FD] text-white font-medium text-base px-5 py-3 rounded-lg">Completed</button>
+                         </div>
+                    </div>
+                </div>
+            </section>
+            <section class="basis-1/4 flex flex-col">
+                <!-- Clear History Button -->
+                <div class="bg-white flex flex-col items-center gap-3 border-b-2 border-dotted rounded-2xl p-6 rounded-b-none">
+                    <div class="flex gap-4 items-center">
+                        <img src="assets/activity.png" alt="activity">
+                        <h3 class="font-medium text-xl">Activity Log</h3>
+                    </div>
+                    <button class="bg-[#3752FD] text-white font-medium text-base px-5 py-3 rounded-lg">Clear History</button>
+                </div>
+                <!-- Activity Log Update -->
+                <div class="bg-white rounded-2xl p-4 rounded-t-none text-black flex-1">
+                    <div class="bg-[#F4F7FF] p-6 rounded-2xl">
+                        <h1>You have completed</h1>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
