@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBoard Blogs</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        .poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[#F4F7FF] poppins text-[#00303C]">
+    <header>
+        <div class="container mx-auto p-6 gap-6 flex justify-between items-center bg-white rounded-2xl my-6">
+            <!-- Logo -->
+            <div class="flex items-center gap-2">
+                <img src="assets/logo.png" alt="logo">
+                <h2 class="text-4xl font-light">Dev<span class="font-bold">Board</span></h2>
+            </div>
+            <!-- Back To Main Page -->
+            <div >
+                <button class="bg-[#3752FD] text-white font-medium text-base px-5 py-3 rounded-lg">Back To Desk</button>
+            </div>
+        </div>
+    </header>
+    <main class="container mx-auto flex flex-col gap-3 mb-10">
+        <h1 class="text-2xl font-bold text-center">Blogs</h1>
+        <!-- Question 1 -->
+        <section class="bg-white rounded-2xl">
+            <div class="p-6 border-b-2 border-dotted font-bold text-lg">
+                <h2>Question-1: What are the different ways to select an element in the DOM?</h2>
+            </div>
+            <div class="p-6 font-normal text-lg font-sans">
+                <h3>We can select an elements in DOM in the following ways:</h3>
+                <ol class="list-decimal list-inside">
+                    <li>getElementById()</li>
+                    <li>getElementsByClassName()</li>
+                    <li>getElementsByTagName()</li>
+                    <li>querySelector()</li>
+                    <li>querySelectorAll()</li>
+                </ol>
+            </div>
+        </section>
+        <!-- Question 2 -->
+        <section class="bg-white rounded-2xl">
+            <div class="p-6 border-b-2 border-dotted font-bold text-lg">
+                <h2>Question-2: What is the difference between innerHTML, innerText, and textContent ?</h2>
+            </div>
+            <div class="p-6 font-normal text-lg font-sans flex flex-col gap-3">
+                <div>
+                    <h3 class="font-bold">innerHTML:</h3>
+                    <p>innerHTML is a property used to fetch the HTML content of the element, including any HTML tags inside the element. We can also set the HTML elements using innerHTML.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold">innerText:</h3>
+                <p>innerText is a property used to fetch the text content of the element, excluding any HTML tags inside the element. We can also change the text content of the element using innerText.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold">textContent:</h3>
+                    <p>textContent is a property used to fetch the text content of the element, including any hidden text inside the element but excluding any HTML tags inside the element. We can also change the text content of the element using textContent.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Question 3 -->
+        <section class="bg-white rounded-2xl">
+            <div class="p-6 border-b-2 border-dotted font-bold text-lg">
+                <h2>Question-3: What is event delegation in the DOM?</h2>
+            </div>
+            <div class="p-6 font-normal text-lg font-sans">
+                <p>Event delegation is a technique in which we add a single event listener to a parent element that will handle the event for all its child, whether they are present now or added in the future. It allows us to avoid adding event listeners to specific element.</p>
+            </div>
+        </section>
+        <!-- Question 4 -->
+        <section class="bg-white rounded-2xl">
+            <div class="p-6 border-b-2 border-dotted font-bold text-lg">
+                <h2>Question-4: What is event bubbling in the DOM?</h2>
+            </div>
+            <div class="p-6 font-normal text-lg font-sans">
+                <p>Event bubbling is a process in which the event is first captured by the target element and then propagated to the parent elements in DOM.</p>
+            </div>
+        </section>
+        <!-- Question 5 -->
+        <section class="bg-white rounded-2xl">
+            <div class="p-6 border-b-2 border-dotted font-bold text-lg">
+                <h2>Question-5: How do you create, add, and remove elements using JavaScript?</h2>
+            </div>
+            <div class="p-6 font-normal text-lg font-sans flex flex-col gap-3">
+                <div>
+                    <h3 class="font-bold">Creating Elements:</h3>
+                    <p>We can create elements using the createElement() method.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold">Adding Elements:</h3>
+                    <p>We can add elements to the DOM using the appendChild() method.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold">Removing Elements:</h3>
+                    <p>We can remove elements from the DOM using the removeChild() method.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
