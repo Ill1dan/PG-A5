@@ -20,7 +20,7 @@
         }
     </style>
 </head>
-<body class="bg-[#F4F7FF] poppins text-[#00303C]">
+<body class="bg-[#F4F7FF] poppins text-[#00303C]" id="background">
     <header>
         <div class="container mx-auto p-6 gap-6 md:gap-0 flex flex-col md:flex-row justify-between items-center bg-white rounded-2xl mb-6 md:my-6">
             <!-- Logo -->
@@ -30,11 +30,11 @@
             </div>
             <!-- Total Tasks Complete & Theme -->
             <div class="flex items-center gap-24 md:gap-6">
-                <div class="flex items-center gap-2 p-3 bg-[#F4F7FF] rounded-2xl">
+                <div class="flex items-center gap-2 p-3 bg-[#F4F7FF] rounded-2xl back">
                     <img src="assets/checkbox.png" alt="checkbox">
-                    <h2 class="font-bold text-3xl">23</h2>
+                    <h2 class="font-bold text-3xl" id="task-completed">23</h2>
                 </div>
-                <div class="bg-[#F4F7FF] p-3 rounded-full cursor-pointer">
+                <div class="bg-[#F4F7FF] p-3 rounded-full cursor-pointer" id="theme-btn">
                     <img src="assets/theme-btn.png" alt="theme-btn">
                 </div>
             </div>
@@ -46,13 +46,13 @@
             <section class="flex-1">
                 <div class="p-6 bg-white grid grid-cols-4 gap-6 rounded-2xl rounded-b-none border-b-2 border-dotted">
                     <!-- Task Remaining -->
-                    <div class="flex flex-col md:flex-row gap-3 items-center bg-[#F4F7FF] p-6 rounded-2xl col-span-2 lg:col-span-1 row-start-1">
+                    <div class="flex flex-col md:flex-row gap-3 items-center bg-[#F4F7FF] p-6 rounded-2xl col-span-2 lg:col-span-1 row-start-1 back">
                         <div class="p-6 bg-white rounded-full inline-block">
                             <img src="assets/checkbox.png" alt="checkbox" class="w-7 aspect-square max-w-none">
                         </div>
                         <div class="text-center md:text-start">
                             <h3 class="font-medium text-base">Task Assigned</h3>
-                            <h1 class="font-bold text-3xl">06</h1>
+                            <h1 class="font-bold text-3xl" id="task-assigned">06</h1>
                         </div>
 
                     </div>
@@ -65,7 +65,7 @@
                         </div>
                     </div>
                     <!-- Date -->
-                    <div class="flex flex-col md:flex-row gap-3 items-center bg-[#F4F7FF] p-6 rounded-2xl col-span-2 lg:col-span-1 row-start-1 lg:row-start-auto">
+                    <div class="flex flex-col md:flex-row gap-3 items-center bg-[#F4F7FF] p-6 rounded-2xl col-span-2 lg:col-span-1 row-start-1 lg:row-start-auto back">
                         <div class="p-6 bg-white rounded-full inline-block">
                             <img src="assets/calender.png" alt="calender" class="w-6 aspect-square max-w-none">
                         </div>
@@ -83,14 +83,14 @@
                 <!-- Task Container -->
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 bg-white rounded-2xl rounded-t-none">
                     <!-- Task 1 -->
-                    <div class="bg-[#F4F7FF] p-6 rounded-2xl flex flex-col">
+                    <div class="bg-[#F4F7FF] p-6 rounded-2xl flex flex-col back">
                         <!-- Task Details -->
                         <div class="flex flex-col gap-3 pb-6 border-b-2 border-dotted flex-1">
                             <div class="bg-white p-3 rounded-lg self-start">
                                 <h3 class="font-normal text-base">ShopEase</h3>
                             </div>
-                            <h1 class="font-medium text-2xl letter tracking-wider">Fix Mobile Button Issue</h1>
-                            <div class="bg-white p-3 rounded-lg">
+                            <h1 class="font-medium text-2xl letter tracking-wider" id="completed-one-problem">Fix Mobile Button Issue</h1>
+                            <div class="bg-white p-3 rounded-lg mt-auto">
                                 <h3 class="font-normal text-base text-gray-500">Debug using chrome<br>DevTools, can check for any issue</h3>
                             </div>
                         </div>
@@ -100,18 +100,18 @@
                                 <h3 class="text-sm font-normal">Deadline</h3>
                                 <h2 class="text-base font-medium">21 March 2025</h2>
                             </div>
-                            <button class="bg-[#3752FD] text-white font-medium text-base px-5 py-3 rounded-lg">Completed</button>
+                            <button class="bg-[#3752FD] text-white font-medium text-base px-5 py-3 rounded-lg disabled:bg-[#9BA8F8]" id="completed-one">Completed</button>
                          </div>
                     </div>
                     <!-- Task 2 -->
-                    <div class="bg-[#F4F7FF] p-6 rounded-2xl flex flex-col">
+                    <div class="bg-[#F4F7FF] p-6 rounded-2xl flex flex-col back">
                         <!-- Task Details -->
                         <div class="flex flex-col gap-3 pb-6 border-b-2 border-dotted flex-1">
                             <div class="bg-white p-3 rounded-lg self-start">
                                 <h3 class="font-normal text-base">CloudSync</h3>
                             </div>
-                            <h1 class="font-medium text-2xl letter tracking-wider">Add Dark Mode</h1>
-                            <div class="bg-white p-3 rounded-lg">
+                            <h1 class="font-medium text-2xl letter tracking-wider" id="completed-two-problem">Add Dark Mode</h1>
+                            <div class="bg-white p-3 rounded-lg mt-auto">
                                 <h3 class="font-normal text-base text-gray-500">Debug using chrome<br>DevTools, can check for any issue</h3>
                             </div>
                         </div>
@@ -121,18 +121,18 @@
                                 <h3 class="text-sm font-normal">Deadline</h3>
                                 <h2 class="text-base font-medium">21 March 2025</h2>
                             </div>
-                            <button class="bg-[#3752FD] text-white font-medium text-base px-5 py-3 rounded-lg">Completed</button>
+                            <button class="bg-[#3752FD] text-white font-medium text-base px-5 py-3 rounded-lg disabled:bg-[#9BA8F8]" id="completed-two">Completed</button>
                          </div>
                     </div>
                     <!-- Task 3 -->
-                    <div class="bg-[#F4F7FF] p-6 rounded-2xl flex flex-col">
+                    <div class="bg-[#F4F7FF] p-6 rounded-2xl flex flex-col back">
                         <!-- Task Details -->
                         <div class="flex flex-col gap-3 pb-6 border-b-2 border-dotted flex-1">
                             <div class="bg-white p-3 rounded-lg self-start">
                                 <h3 class="font-normal text-base">SwiftPay</h3>
                             </div>
-                            <h1 class="font-medium text-2xl letter tracking-wider">Optimize Home page</h1>
-                            <div class="bg-white p-3 rounded-lg">
+                            <h1 class="font-medium text-2xl letter tracking-wider" id="completed-three-problem">Optimize Home page</h1>
+                            <div class="bg-white p-3 rounded-lg mt-auto">
                                 <h3 class="font-normal text-base text-gray-500">Debug using chrome<br>DevTools, can check for any issue</h3>
                             </div>
                         </div>
@@ -142,18 +142,18 @@
                                 <h3 class="text-sm font-normal">Deadline</h3>
                                 <h2 class="text-base font-medium">21 March 2025</h2>
                             </div>
-                            <button class="bg-[#3752FD] text-white font-medium text-base px-5 py-3 rounded-lg">Completed</button>
+                            <button class="bg-[#3752FD] text-white font-medium text-base px-5 py-3 rounded-lg disabled:bg-[#9BA8F8]" id="completed-three">Completed</button>
                          </div>
                     </div>
                     <!-- Task 4 -->
-                    <div class="bg-[#F4F7FF] p-6 rounded-2xl flex flex-col">
+                    <div class="bg-[#F4F7FF] p-6 rounded-2xl flex flex-col back">
                         <!-- Task Details -->
                         <div class="flex flex-col gap-3 pb-6 border-b-2 border-dotted flex-1">
                             <div class="bg-white p-3 rounded-lg self-start">
                                 <h3 class="font-normal text-base">Meta</h3>
                             </div>
-                            <h1 class="font-medium text-2xl letter tracking-wider">Add new emoji 🤲</h1>
-                            <div class="bg-white p-3 rounded-lg">
+                            <h1 class="font-medium text-2xl letter tracking-wider" id="completed-four-problem">Add new emoji 🤲</h1>
+                            <div class="bg-white p-3 rounded-lg mt-auto">
                                 <h3 class="font-normal text-base text-gray-500">Debug using chrome<br>DevTools, can check for any issue</h3>
                             </div>
                         </div>
@@ -163,18 +163,18 @@
                                 <h3 class="text-sm font-normal">Deadline</h3>
                                 <h2 class="text-base font-medium">21 March 2025</h2>
                             </div>
-                            <button class="bg-[#3752FD] text-white font-medium text-base px-5 py-3 rounded-lg">Completed</button>
+                            <button class="bg-[#3752FD] text-white font-medium text-base px-5 py-3 rounded-lg disabled:bg-[#9BA8F8]" id="completed-four">Completed</button>
                          </div>
                     </div>
                     <!-- Task 5 -->
-                    <div class="bg-[#F4F7FF] p-6 rounded-2xl flex flex-col">
+                    <div class="bg-[#F4F7FF] p-6 rounded-2xl flex flex-col back">
                         <!-- Task Details -->
                         <div class="flex flex-col gap-3 pb-6 border-b-2 border-dotted flex-1">
                             <div class="bg-white p-3 rounded-lg self-start">
                                 <h3 class="font-normal text-base">Google LLC</h3>
                             </div>
-                            <h1 class="font-medium text-2xl letter tracking-wider">Integrate OpenAI API</h1>
-                            <div class="bg-white p-3 rounded-lg">
+                            <h1 class="font-medium text-2xl letter tracking-wider" id="completed-five-problem">Integrate OpenAI API</h1>
+                            <div class="bg-white p-3 rounded-lg mt-auto">
                                 <h3 class="font-normal text-base text-gray-500">Debug using chrome<br>DevTools, can check for any issue</h3>
                             </div>
                         </div>
@@ -184,18 +184,18 @@
                                 <h3 class="text-sm font-normal">Deadline</h3>
                                 <h2 class="text-base font-medium">21 March 2025</h2>
                             </div>
-                            <button class="bg-[#3752FD] text-white font-medium text-base px-5 py-3 rounded-lg">Completed</button>
+                            <button class="bg-[#3752FD] text-white font-medium text-base px-5 py-3 rounded-lg disabled:bg-[#9BA8F8]" id="completed-five">Completed</button>
                          </div>
                     </div>
                     <!-- Task 6 -->
-                    <div class="bg-[#F4F7FF] p-6 rounded-2xl flex flex-col">
+                    <div class="bg-[#F4F7FF] p-6 rounded-2xl flex flex-col back">
                         <!-- Task Details -->
                         <div class="flex flex-col gap-3 pb-6 border-b-2 border-dotted flex-1">
                             <div class="bg-white p-3 rounded-lg self-start">
                                 <h3 class="font-normal text-base">Glassdoar</h3>
                             </div>
-                            <h1 class="font-medium text-2xl letter tracking-wider">Improve Job searching</h1>
-                            <div class="bg-white p-3 rounded-lg">
+                            <h1 class="font-medium text-2xl letter tracking-wider" id="completed-six-problem">Improve Job searching</h1>
+                            <div class="bg-white p-3 rounded-lg mt-auto">
                                 <h3 class="font-normal text-base text-gray-500">Debug using chrome<br>DevTools, can check for any issue</h3>
                             </div>
                         </div>
@@ -205,7 +205,7 @@
                                 <h3 class="text-sm font-normal">Deadline</h3>
                                 <h2 class="text-base font-medium">21 March 2025</h2>
                             </div>
-                            <button class="bg-[#3752FD] text-white font-medium text-base px-5 py-3 rounded-lg">Completed</button>
+                            <button class="bg-[#3752FD] text-white font-medium text-base px-5 py-3 rounded-lg disabled:bg-[#9BA8F8]" id="completed-six">Completed</button>
                          </div>
                     </div>
                 </div>
@@ -217,13 +217,13 @@
                         <img src="assets/activity.png" alt="activity">
                         <h3 class="font-medium text-xl">Activity Log</h3>
                     </div>
-                    <button class="bg-[#3752FD] text-white font-medium text-base px-5 py-3 rounded-lg">Clear History</button>
+                    <button class="bg-[#3752FD] text-white font-medium text-base px-5 py-3 rounded-lg select-none" id="clear-history">Clear History</button>
                 </div>
                 <!-- Activity Log Update -->
-                <div class="bg-white rounded-2xl p-4 rounded-t-none text-black flex-1">
-                    <div class="bg-[#F4F7FF] p-6 rounded-2xl">
+                <div class="bg-white rounded-2xl p-4 rounded-t-none text-black flex-1 select-none" id="activity-log">
+                    <!-- <div class="bg-[#F4F7FF] p-6 rounded-2xl mb-4">
                         <h1>You have completed</h1>
-                    </div>
+                    </div> -->
                 </div>
             </section>
         </div>
@@ -231,5 +231,7 @@
 
     <!-- Scripts -->
      <script src="js/redirect.js"></script>
+     <script src="js/completed.js"></script>
+     <script src="js/color-theme.js"></script>
 </body>
 </html>
